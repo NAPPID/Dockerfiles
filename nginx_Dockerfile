@@ -1,0 +1,8 @@
+
+ARG VERSION=18.04
+FROM ubuntu:${VERSION}
+RUN apt-get update && apt-get install -y curl nginx
+EXPOSE 80
+ENTRYPOINT ["nginx","-g"]
+CMD ["daemon off;"]
+
